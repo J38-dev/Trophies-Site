@@ -697,3 +697,6 @@ font-size:18px;
   text-align: center; /* ensures the text stays centered */
 }
 
+.about-container{
+text-align:center;
+}
