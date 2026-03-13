@@ -216,6 +216,16 @@ color:#2f308d;
 
 }
 
+.product-icon{
+width:32px;
+height:32px;
+object-fit:contain;
+margin-bottom:15px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
 .product-card:hover{
 
 transform:translateY(-6px);
@@ -700,3 +710,4 @@ font-size:18px;
 .about-container{
 text-align:center;
 }
+
