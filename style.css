@@ -206,14 +206,16 @@ transition:0.2s;
 
 }
 
-.product-card i{
-
+.product-card i,
+.product-icon{
 font-size:32px;
-
+width:32px;
+height:32px;
 margin-bottom:15px;
-
+display:block;
+margin-left:auto;
+margin-right:auto;
 color:#2f308d;
-
 }
 
 .product-icon{
@@ -710,4 +712,5 @@ font-size:18px;
 .about-container{
 text-align:center;
 }
+
 
