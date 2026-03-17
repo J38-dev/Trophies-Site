@@ -222,14 +222,22 @@ transform:translateY(-6px);
 
 }
 
-/* PRODUCT ICON IMAGE FIX */
-.product-card .product-icon {
-  width: 32px;          /* same as FontAwesome icons */
-  height: 32px;         /* same as FontAwesome icons */
+/* MEDAL IMAGE STYLING */
+.product-card .product-icon-medal {
+  width: 32px;            /* same size as icons */
+  height: 32px;           /* same size as icons */
   display: block;
-  margin: 0 auto 15px;  /* center it like the other icons */
-  object-fit: contain;  /* keeps image ratio without stretching */
+  margin: 0 auto 15px;    /* center it like other icons */
+  object-fit: contain;    /* keeps original aspect ratio */
+  border-radius: 4px;     /* optional: rounded corners if you want */
+  transition: transform 0.3s ease;
 }
+
+/* optional hover effect for this image only */
+.product-card .product-icon-medal:hover {
+  transform: scale(1.05); /* slight zoom */
+}
+
 
 /* ADD TO CART BUTTON */
 
