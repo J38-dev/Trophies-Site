@@ -22,10 +22,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="logo">Trophies & Badges</div>
 
 <div class="nav-links">
+
 <a href="index.html">Home</a>
 <a href="products.html">Products</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
+<!-- CART ICON -->
+
+<div class="cart-icon" id="cartIcon">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cartCount">0</span>
+</div>
+
+<!-- DARK MODE -->
+
+<button id="darkToggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+
 </div>
 
 </nav>
@@ -40,49 +55,105 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </section>
 
 
-<section class="products">
+<section class="product-tools">
 
-<div class="product-grid">
+<div class="search-bar">
 
-<div class="product-card">
-<i class="fa-solid fa-trophy"></i>
-<h3>Set Trophies</h3>
-<p>High quality trophies for competitions.</p>
-</div>
+<input
+type="text"
+id="searchInput"
+placeholder="Search products...">
 
-<div class="product-card">
-<i class="fa-solid fa-medal"></i>
-<h3>Medals</h3>
-<p>Custom engraved medals.</p>
-</div>
-
-<div class="product-card">
-<i class="fa-regular fa-id-badge"></i>
-<h3>Badges</h3>
-<p>School and corporate badges.</p>
-</div>
-
-<div class="product-card">
-<i class="fa-solid fa-stamp"></i>
-<h3>Rubber Stamps</h3>
-<p>Professional office stamps.</p>
-</div>
-
-<div class="product-card">
-<i class="fa-solid fa-shirt"></i>
-<h3>T-Shirts</h3>
-<p>Custom printed shirts.</p>
-</div>
-
-<div class="product-card">
-<i class="fa-solid fa-book"></i>
-<h3>Academic Awards</h3>
-<p>Perfect for school achievements.</p>
-</div>
+<button id="searchBtn">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
 
 </div>
 
 </section>
+
+
+<section class="products">
+
+<div class="product-grid">
+
+
+<div class="product-card">
+
+<div class="product-image">
+<img src="images/trophy1.jpg">
+</div>
+
+<h3>Gold Trophy</h3>
+
+<p class="price">R250</p>
+
+<button class="add-cart">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">
+<img src="images/trophy1.jpg">
+</div>
+
+<h3>Gold Trophy</h3>
+
+<p class="price">R250</p>
+
+<button class="add-cart">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="product-card">
+
+<div class="product-image">
+<img src="images/trophy1.jpg">
+</div>
+
+<h3>Gold Trophy</h3>
+
+<p class="price">R250</p>
+
+<button class="add-cart">
+Add to Cart
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+  
+  <div class="cart-panel" id="cartPanel">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<i class="fa-solid fa-xmark" id="closeCart"></i>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+Total: <span id="cartTotal">R0</span>
+</div>
+
+<button class="checkout-btn">
+Checkout
+</button>
+
+</div>
 
 
 <footer class="footer">
@@ -92,6 +163,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </p>
 
 </footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
