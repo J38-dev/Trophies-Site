@@ -1270,3 +1270,143 @@ background:radial-gradient(circle at top,#1b1b1e,#0f0f10);
 body.dark .page-hero p{
 color:#cfcfcf;
 }
+
+/* =========================
+   DARK MODE TEXT FIXES
+========================= */
+
+body.dark {
+  background: #0f0f10;
+  color: #f1f1f1; /* default body text */
+}
+
+/* NAVBAR */
+body.dark .nav {
+  background: #1a1a1c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark .nav-links a {
+  color: #e6e6e6;
+}
+
+body.dark .nav-links a:hover {
+  color: #ff3b3b;
+}
+
+/* HERO / PAGE HERO */
+body.dark .hero,
+body.dark .page-hero {
+  color: #f1f1f1;
+  background: radial-gradient(circle at top, #1b1b1e, #0f0f10);
+}
+
+body.dark .hero h1,
+body.dark .page-hero h1 {
+  color: #ffffff;
+}
+
+body.dark .hero p,
+body.dark .page-hero p {
+  color: #cccccc;
+}
+
+/* PRODUCTS SECTION */
+body.dark .products {
+  background: #141416;
+}
+
+body.dark .products h2 {
+  color: #ffffff;
+}
+
+body.dark .product-card {
+  background: #1f1f22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 0 #2f308d, 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .product-card h3 {
+  color: #ffffff;
+}
+
+body.dark .product-card p {
+  color: #d9d9d9;
+}
+
+/* CTA SECTION */
+body.dark .cta {
+  background: #2f308d;
+  color: #f1f1f1;
+}
+
+body.dark .cta h2 {
+  color: #ffffff;
+}
+
+body.dark .cta p {
+  color: #f0f0f0;
+}
+
+/* ABOUT / CONTACT */
+body.dark .about,
+body.dark .contact {
+  color: #e6e6e6;
+}
+
+body.dark .about p,
+body.dark .contact p {
+  color: #cccccc;
+}
+
+/* FOOTER */
+body.dark .footer {
+  background: #0f0f10;
+  color: #e6e6e6;
+}
+
+body.dark .footer h4 {
+  color: #ffffff;
+}
+
+body.dark .footer p {
+  color: #aaa;
+}
+
+/* SEARCH BAR */
+body.dark #searchInput {
+  background: #1c1c1e;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark #searchBtn {
+  background: #2f308d;
+}
+
+body.dark #searchBtn:hover {
+  background: #ff3b3b;
+}
+
+/* CART */
+body.dark .cart-panel {
+  background: #1a1a1c;
+  color: #f1f1f1;
+}
+
+body.dark .cart-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark .cart-icon {
+  color: #f1f1f1;
+}
+
+body.dark .cart-icon:hover {
+  color: #ff3b3b;
+}
+
+/* DARK MODE BUTTON */
+body.dark #darkToggle {
+  color: #f1f1f1;
+}
