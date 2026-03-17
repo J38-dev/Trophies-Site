@@ -3,17 +3,24 @@ document.addEventListener("DOMContentLoaded", function(){
 /* =========================
    DARK MODE
 ========================= */
-
 const darkToggle = document.getElementById("darkToggle")
 
+// Check localStorage on page load
+if(localStorage.getItem("darkMode") === "enabled"){
+    document.body.classList.add("dark")
+}
+
 if(darkToggle){
+    darkToggle.addEventListener("click", function(){
+        document.body.classList.toggle("dark")
 
-darkToggle.addEventListener("click", function(){
-
-document.body.classList.toggle("dark")
-
-})
-
+        // Save preference
+        if(document.body.classList.contains("dark")){
+            localStorage.setItem("darkMode", "enabled")
+        } else {
+            localStorage.setItem("darkMode", "disabled")
+        }
+    })
 }
 
 
