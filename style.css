@@ -222,6 +222,15 @@ transform:translateY(-6px);
 
 }
 
+/* PRODUCT ICON IMAGE FIX */
+.product-card .product-icon {
+  width: 32px;          /* same as FontAwesome icons */
+  height: 32px;         /* same as FontAwesome icons */
+  display: block;
+  margin: 0 auto 15px;  /* center it like the other icons */
+  object-fit: contain;  /* keeps image ratio without stretching */
+}
+
 /* ADD TO CART BUTTON */
 
 .add-cart{
