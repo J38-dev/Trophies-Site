@@ -205,3 +205,18 @@ searchInput.addEventListener("keyup", searchProducts)
 }
 
 })
+
+const images = document.querySelectorAll(".clickable-img");
+const popup = document.getElementById("imagePopup");
+const popupImg = document.getElementById("popupImg");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    popup.classList.add("active");
+    popupImg.src = img.src;
+  });
+});
+
+popup.addEventListener("click", () => {
+  popup.classList.remove("active");
+});
