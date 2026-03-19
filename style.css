@@ -1462,3 +1462,109 @@ body.dark #darkToggle {
 #darkToggle:hover {
   color: #f4070d;
 }
+
+/* =========================
+   GLOBAL FIX
+========================= */
+
+body{
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px){
+
+  .nav{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links{
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links a{
+    margin-left: 0;
+  }
+
+  .cart-icon{
+    margin-left: 0;
+  }
+
+}
+
+
+/* =========================
+   HERO RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px){
+
+  .hero h1{
+    font-size: 32px;
+  }
+
+  .hero p{
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .hero-logo{
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+
+/* =========================
+   BUTTONS MOBILE FIX
+========================= */
+
+@media (max-width: 768px){
+
+  .hero-buttons{
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-admin{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+
+/* =========================
+   PRODUCT FIX
+========================= */
+
+.product-card{
+  width: 100%;
+}
+
+
+/* =========================
+   SEARCH BAR FIX
+========================= */
+
+@media (max-width: 768px){
+
+  .search-bar{
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #searchInput{
+    font-size: 14px;
+  }
+
+}
