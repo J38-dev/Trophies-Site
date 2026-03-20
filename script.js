@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function(){
 /* =========================
    DARK MODE
 ========================= */
+
 const darkToggle = document.getElementById("darkToggle")
 
-// Check localStorage on page load
 if(localStorage.getItem("darkMode") === "enabled"){
     document.body.classList.add("dark")
 }
@@ -14,7 +14,6 @@ if(darkToggle){
     darkToggle.addEventListener("click", function(){
         document.body.classList.toggle("dark")
 
-        // Save preference
         if(document.body.classList.contains("dark")){
             localStorage.setItem("darkMode", "enabled")
         } else {
@@ -40,31 +39,16 @@ const cartTotal = document.getElementById("cartTotal")
 const cartCount = document.getElementById("cartCount")
 
 
-
-/* OPEN CART */
-
 if(cartIcon){
-
-cartIcon.addEventListener("click", function(){
-
-cartPanel.classList.add("open")
-
-})
-
+    cartIcon.addEventListener("click", function(){
+        cartPanel.classList.add("open")
+    })
 }
 
-
-
-/* CLOSE CART */
-
 if(closeCart){
-
-closeCart.addEventListener("click", function(){
-
-cartPanel.classList.remove("open")
-
-})
-
+    closeCart.addEventListener("click", function(){
+        cartPanel.classList.remove("open")
+    })
 }
 
 
@@ -79,11 +63,15 @@ button.addEventListener("click", function(){
 
 const card = button.closest(".product-card")
 
-const name = card.querySelector("h3").innerText
+if(!card) return
 
-const price = parseFloat(
-card.querySelector(".price").innerText.replace("R","")
-)
+const nameEl = card.querySelector("h3")
+const priceEl = card.querySelector(".price")
+
+if(!nameEl || !priceEl) return
+
+const name = nameEl.innerText
+const price = parseFloat(priceEl.innerText.replace("R",""))
 
 cart.push({name, price})
 
@@ -110,28 +98,20 @@ cart.forEach((item,index)=>{
 total += item.price
 
 cartItems.innerHTML += `
-
 <div class="cart-item">
-
 <span>${item.name}</span>
-
 <span>R${item.price}</span>
-
 <button class="remove-item" data-index="${index}">x</button>
-
 </div>
-
 `
 
 })
 
-cartTotal.innerText = "R" + total
-
-cartCount.innerText = cart.length
-
+if(cartTotal) cartTotal.innerText = "R" + total
+if(cartCount) cartCount.innerText = cart.length
 
 
-/* REMOVE BUTTONS */
+/* REMOVE ITEMS */
 
 const removeButtons = document.querySelectorAll(".remove-item")
 
@@ -140,7 +120,6 @@ removeButtons.forEach(button => {
 button.addEventListener("click", function(){
 
 const index = button.dataset.index
-
 cart.splice(index,1)
 
 updateCart()
@@ -162,64 +141,65 @@ const searchBtn = document.getElementById("searchBtn")
 
 function searchProducts(){
 
-const filter = searchInput.value.toLowerCase()
+if(!searchInput) return
 
+const filter = searchInput.value.toLowerCase()
 const products = document.querySelectorAll(".product-card")
 
 products.forEach(product => {
 
-const name = product.querySelector("h3").innerText.toLowerCase()
+const nameEl = product.querySelector("h3")
+
+if(!nameEl) return
+
+const name = nameEl.innerText.toLowerCase()
 
 if(name.includes(filter)){
-
 product.style.display = "block"
-
 }else{
-
 product.style.display = "none"
-
 }
 
 })
 
 }
-
-
-
-/* SEARCH BUTTON */
 
 if(searchBtn){
-
 searchBtn.addEventListener("click", searchProducts)
-
 }
-
-
-
-/* SEARCH LIVE */
 
 if(searchInput){
-
 searchInput.addEventListener("keyup", searchProducts)
-
 }
 
-})
 
 
-const images = document.querySelectorAll(".clickable-img");
-const popup = document.getElementById("imagePopup");
-const popupImg = document.getElementById("popupImg");
+/* =========================
+   IMAGE FULL VIEW (NO HTML NEEDED)
+========================= */
+
+// create modal dynamically
+const modal = document.createElement("div")
+modal.classList.add("dynamic-modal")
+
+const modalImg = document.createElement("img")
+
+modal.appendChild(modalImg)
+document.body.appendChild(modal)
+
+// click any product image
+const images = document.querySelectorAll(".product-card img")
 
 images.forEach(img => {
   img.addEventListener("click", () => {
-    popup.classList.add("active");
+    modal.style.display = "flex"
+    modalImg.src = img.dataset.full || img.src
+  })
+})
 
-    // 👇 THIS is the fix
-    popupImg.src = img.dataset.full || img.src;
-  });
-});
+// close modal
+modal.addEventListener("click", () => {
+  modal.style.display = "none"
+})
 
-popup.addEventListener("click", () => {
-  popup.classList.remove("active");
-});
+})
