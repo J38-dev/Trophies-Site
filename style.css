@@ -1592,3 +1592,82 @@ body{
 .image-popup.active{
   display: flex;
 }
+
+/* =========================
+   PRODUCTS FIX (FULL)
+========================= */
+
+/* GRID LAYOUT FIX */
+
+.products,
+.product-container,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 10%;
+}
+
+/* FORCE SQUARE CARDS */
+
+.product-card,
+.product,
+.card {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: #111;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.product-card:hover,
+.product:hover,
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE FIX (PREVIEW MODE) */
+
+.product-card img,
+.product img,
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cropped preview */
+  display: block;
+}
+
+/* =========================
+   MODAL (FULL IMAGE VIEW)
+========================= */
+
+.dynamic-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+}
+
+.dynamic-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* FULL IMAGE */
+}
+
+/* OPTIONAL: DARK MODE VISIBILITY BOOST */
+
+body.dark-mode .product-card,
+body.dark-mode .product,
+body.dark-mode .card {
+  background: #1a1a1a;
+}
