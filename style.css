@@ -1569,26 +1569,34 @@ body{
 }
 
 
+/* =========================
+   IMAGE POPUP (FINAL)
+========================= */
+
 .image-popup{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+
   background: rgba(0,0,0,0.95);
-  display: none;
+
+  display: none; /* hidden by default */
+
   align-items: center;
   justify-content: center;
-  z-index: 999;
+
+  z-index: 9999;
 }
 
 .image-popup img{
   max-width: 95%;
   max-height: 95%;
-  object-fit: contain; /* THIS is the key */
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .image-popup.active{
   display: flex;
 }
-
