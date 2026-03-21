@@ -178,7 +178,7 @@ searchInput.addEventListener("keyup", searchProducts)
    IMAGE FULL VIEW (WORKING)
 ========================= */
 
-window.addEventListener("load", function () {
+
 
   const popup = document.getElementById("imagePopup");
   const popupImg = document.getElementById("popupImg");
@@ -196,5 +196,3 @@ window.addEventListener("load", function () {
   popup.addEventListener("click", function(){
     popup.classList.remove("active");
   });
-
-});
