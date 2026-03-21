@@ -175,31 +175,22 @@ searchInput.addEventListener("keyup", searchProducts)
 
 
 /* =========================
-   IMAGE FULL VIEW (NO HTML NEEDED)
+   IMAGE FULL VIEW (USE EXISTING POPUP)
 ========================= */
 
-// create modal dynamically
-const modal = document.createElement("div")
-modal.classList.add("dynamic-modal")
+const popup = document.getElementById("imagePopup")
+const popupImg = document.getElementById("popupImg")
 
-const modalImg = document.createElement("img")
-
-modal.appendChild(modalImg)
-document.body.appendChild(modal)
-
-// click any product image
-const images = document.querySelectorAll(".product-card img")
+const images = document.querySelectorAll(".clickable-img")
 
 images.forEach(img => {
   img.addEventListener("click", () => {
-    modal.style.display = "flex"
-    modalImg.src = img.dataset.full || img.src
+    popup.classList.add("active")
+    popupImg.src = img.dataset.full || img.src
   })
 })
 
-// close modal
-modal.addEventListener("click", () => {
-  modal.style.display = "none"
-})
-
+// click anywhere to close
+popup.addEventListener("click", () => {
+  popup.classList.remove("active")
 })
