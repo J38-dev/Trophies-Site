@@ -175,22 +175,27 @@ searchInput.addEventListener("keyup", searchProducts)
 
 
 /* =========================
-   IMAGE FULL VIEW (USE EXISTING POPUP)
+   IMAGE FULL VIEW FIXED
 ========================= */
 
-const popup = document.getElementById("imagePopup")
-const popupImg = document.getElementById("popupImg")
+const popup = document.getElementById("imagePopup");
+const popupImg = document.getElementById("popupImg");
 
-const images = document.querySelectorAll(".clickable-img")
+// make sure elements exist
+if (popup && popupImg) {
 
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    popup.classList.add("active")
-    popupImg.src = img.dataset.full || img.src
-  })
-})
+  const images = document.querySelectorAll(".clickable-img");
 
-// click anywhere to close
-popup.addEventListener("click", () => {
-  popup.classList.remove("active")
-})
+  images.forEach(img => {
+    img.addEventListener("click", function () {
+      popup.classList.add("active");
+      popupImg.src = this.src; // simpler + safer
+    });
+  });
+
+  // close when clicking outside
+  popup.addEventListener("click", function () {
+    popup.classList.remove("active");
+  });
+
+}
