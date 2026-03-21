@@ -175,27 +175,26 @@ searchInput.addEventListener("keyup", searchProducts)
 
 
 /* =========================
-   IMAGE FULL VIEW FIXED
+   IMAGE FULL VIEW (WORKING)
 ========================= */
 
-const popup = document.getElementById("imagePopup");
-const popupImg = document.getElementById("popupImg");
+window.addEventListener("load", function () {
 
-// make sure elements exist
-if (popup && popupImg) {
+  const popup = document.getElementById("imagePopup");
+  const popupImg = document.getElementById("popupImg");
 
   const images = document.querySelectorAll(".clickable-img");
 
-  images.forEach(img => {
-    img.addEventListener("click", function () {
+  images.forEach(function(img){
+    img.addEventListener("click", function(){
       popup.classList.add("active");
-      popupImg.src = this.src; // simpler + safer
+      popupImg.src = this.src;
     });
   });
 
-  // close when clicking outside
-  popup.addEventListener("click", function () {
+  // close popup
+  popup.addEventListener("click", function(){
     popup.classList.remove("active");
   });
 
-}
+});
