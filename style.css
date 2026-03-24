@@ -1606,6 +1606,7 @@ body{
 /* Categories Section */
 /* Homepage category icons */
 /* Homepage category icons */
+/* Homepage category icons */
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -1620,17 +1621,16 @@ body{
   justify-content: center;
   width: 180px;
   height: 180px;
-  font-size: 7rem;         /* Extra large icons */
-  color: #87CEEB;          /* Default black */
-  background: #FFFFFF;     /* White background */
-  border-radius: 20px;
-  border: none;
+  font-size: 7rem;           /* Extra large icons */
+  color: #87CEEB;            /* Site blue */
+  background: #FFFFFF;       /* White background */
+  border-radius: 20px;       /* Rounded corners */
   transition: all 0.3s ease;
   text-decoration: none;
+  border: none;              /* Remove border */
 }
 
 .category-icon:hover {
-  color: #FF0000;           /* Your site red on hover */
-  border-color: #FF0000;    /* Red border on hover */
-  transform: scale(1.15);
+  color: #FF0000;            /* Red on hover */
+  transform: scale(1.15);    /* Slight grow effect */
 }
