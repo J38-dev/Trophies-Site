@@ -1604,11 +1604,12 @@ body{
 
 /* Home Page Categories - text links */
 /* Categories Section */
+/* Homepage category icons */
 .categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   margin: 2rem 0;
 }
 
@@ -1616,18 +1617,19 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;      /* big icons */
-  height: 140px;
-  font-size: 4rem;   /* large icons */
-  color: #000;       /* black by default */
-  background: #fff;  /* white background */
-  border-radius: 16px;
+  width: 160px;
+  height: 160px;
+  font-size: 6rem;       /* Extra large icons */
+  color: #000000;        /* Default black */
+  background: #fff;      /* White box behind icons */
+  border-radius: 20px;
+  border: 3px solid #000;/* Black border */
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .category-icon:hover {
-  background-color: #87ceeb; /* sky blue accent */
-  color: #fff;
-  transform: scale(1.1);
+  color: #ff0000;        /* Red on hover (same as site’s red) */
+  transform: scale(1.15);
+  border-color: #ff0000; /* Red border on hover */
 }
