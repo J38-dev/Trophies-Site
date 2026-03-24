@@ -1600,3 +1600,30 @@ body{
 .image-popup.active{
   display: flex;
 }
+
+
+/* Home Page Categories - text links */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.category-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.category-link:hover {
+  background-color: #87ceeb; /* sky blue accent */
+  color: #fff;
+  transform: scale(1.05);
+}
