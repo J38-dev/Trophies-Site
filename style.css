@@ -1603,27 +1603,31 @@ body{
 
 
 /* Home Page Categories - text links */
+/* Categories Section */
 .categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 2rem 0;
 }
 
-.category-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  border: 2px solid #000;
-  border-radius: 8px;
+.category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;      /* big icons */
+  height: 140px;
+  font-size: 4rem;   /* large icons */
+  color: #000;       /* black by default */
+  background: #fff;  /* white background */
+  border-radius: 16px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.category-link:hover {
+.category-icon:hover {
   background-color: #87ceeb; /* sky blue accent */
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
