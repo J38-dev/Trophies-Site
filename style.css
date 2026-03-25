@@ -1139,61 +1139,60 @@ color: #0B2545;
    PRODUCT RESPONSIVE FIX
 ========================= */
 
-/* TABLETS */
-@media (max-width: 1024px){
+/* =========================
+   BIG MOBILE PRODUCT FIX
+========================= */
 
-  .product-grid{
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+@media (max-width: 768px){
+
+  /* FULL WIDTH FEEL */
+  .products{
+    padding:60px 5%;
   }
 
+  .product-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  /* BIGGER CARD */
+  .product-card{
+    padding:50px 30px;
+    border-radius:22px;
+  }
+
+  /* BIGGER IMAGE */
   .product-image{
     height:320px;
   }
 
-}
-
-
-/* MOBILE */
-@media (max-width: 768px){
-
-  .product-grid{
-    grid-template-columns:1fr; /* ONE CARD PER ROW */
-    gap:25px;
-  }
-
-  .product-card{
-    padding:40px 25px;
-  }
-
-  .product-image{
-    height:260px;
-  }
-
+  /* BIGGER TEXT */
   .product-card h3{
-    font-size:1.5rem;
+    font-size:1.6rem;
   }
 
   .product-card p{
-    font-size:1rem;
+    font-size:1.05rem;
   }
 
+  /* BIG BUTTON */
   .add-cart{
-    padding:14px;
+    padding:16px;
+    font-size:1rem;
   }
 
 }
 
 
-/* SMALL PHONES */
+/* EXTRA SMALL PHONES */
 @media (max-width: 480px){
 
-  .product-image{
-    height:220px;
+  .product-card{
+    padding:45px 25px;
   }
 
-  .product-card{
-    padding:30px 20px;
+  .product-image{
+    height:280px;
   }
 
 }
