@@ -1134,3 +1134,66 @@ color: #0B2545;
   padding:16px;
   font-size:1rem;
 }
+
+/* =========================
+   PRODUCT RESPONSIVE FIX
+========================= */
+
+/* TABLETS */
+@media (max-width: 1024px){
+
+  .product-grid{
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+  }
+
+  .product-image{
+    height:320px;
+  }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 768px){
+
+  .product-grid{
+    grid-template-columns:1fr; /* ONE CARD PER ROW */
+    gap:25px;
+  }
+
+  .product-card{
+    padding:40px 25px;
+  }
+
+  .product-image{
+    height:260px;
+  }
+
+  .product-card h3{
+    font-size:1.5rem;
+  }
+
+  .product-card p{
+    font-size:1rem;
+  }
+
+  .add-cart{
+    padding:14px;
+  }
+
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 480px){
+
+  .product-image{
+    height:220px;
+  }
+
+  .product-card{
+    padding:30px 20px;
+  }
+
+}
